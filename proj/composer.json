@@ -1,0 +1,8 @@
+{
+    "name":"web/trabfinal",
+    "autoload":{
+        "psr-4":{
+            "App\\": "app/" 
+        }
+    }
+}

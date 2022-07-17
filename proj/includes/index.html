@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="Stylesheet" type="text/css" href="estilo.css">
+ 
+    <script language=javascript type="text/javascript" src="js.js"></script>
+    <style>
+       
+    </style>
+    <title>Volume Molar </title>
+</head>
+<body>
+    <div id = "crpo">
+
+        <h3> Volume Molar:</h3>
+        <form method="post" action=" ">
+            <div id = "corpo">
+            <label for = "n_mols">Numero de mols:</label>
+            <input  type = "text" id="n_mol" name="n_mols"placeholder="Numero de mols" value="" required/>  <br>
+            <br>Deseja utilizar CNTP?
+            <input type="checkbox" name="CNTP" id ="CNTP"value = "yes" onClick= "preench()"/><br><br>
+            <div id = "TP"> 
+
+            <label for = "temp">Temperatura: </label>
+            <input  type = "text" name="temp"  id="tempe" placeholder="Temperatura" value="" required/>  
+            <select>
+                <option value = "Kelvin"> °K </option>
+                <option value = "Fareheight"> °F </option>
+                <option value = "Celsius"> °C </option>
+            </select> 
+            
+            
+            <br><br>
+            <label for = "pressao">Pressão: </label>
+            <input  type = "text" name="pressao" id="press" placeholder="Pressão" value="" required/> 
+            <select>
+                <option value = "atm"> atm </option>
+                <!-- <option value = "Fareheight"> °F </option>
+                <option value = "Celsius"> °C </option>-->
+            </select> 
+            
+            </div><br>
+
+            
+            <input type = "button" value = "Calcular" onClick ="CalcularVM() "/>
+            <input type = "button" value = "apagar " onClick ="Apag()"/><p></p> 
+                Resultado: <input type = "text" id = "resultado" /> 
+            </div>
+
+        </form>
+       
+    </div>
+ 
+    
+    
+</body>
+</html>

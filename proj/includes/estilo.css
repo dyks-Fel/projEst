@@ -1,0 +1,18 @@
+h3{
+    color: purple
+}  
+body{
+      background: #a9998b;
+}  
+#crpo{
+    width: 90vw;
+    height: auto;
+    min-height: 100%;
+   /* background: #a9998b;*/
+    z-index: 1;
+    margin-top: -22px;
+    font-size: 13px;
+    color: #343434;
+    margin: auto;
+    position: relative;
+}
