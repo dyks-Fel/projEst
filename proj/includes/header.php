@@ -7,11 +7,23 @@
     <!--
         <link rel="Stylesheet" type="text/css" href="estilo.css">
         <script language=javascript type="text/javascript" src="js.js"></script>
-    --><style>
-       
+    -->
+    <style>
+
+        <?= include __DIR__.'/estilo.css'; ?>
+        <?= include __DIR__.'/menu.css'; ?>
+
+
     </style>
+       
+
     <title><?= PageTitle ?></title>
         
     <title>Volume Molar </title>
 </head>
 <body>
+<script language = "javascript" >  
+
+        <?= include __DIR__.'/js.js'; ?>
+
+</script>

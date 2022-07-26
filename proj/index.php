@@ -1,23 +1,23 @@
 <?php
 define('PageTitle', 'Volume molar' );
-$VM = "";
+$result = "";
+$mols  =  "";
+$temper = "";
+$press =  "";
+//<?= n_mol? > 
 
 $escTemp = filter_input(INPUT_POST, 'escTemp', FILTER_SANITIZE_STRING);
-//echo  $escTemp ;
-//echo "<br><br>";
 
 $escPress = filter_input(INPUT_POST, 'escPress', FILTER_SANITIZE_STRING);
-//echo  $escPress ;
 
 if(isset($_POST['n_mols']) && isset($_POST['temp']) && isset($_POST['pressao'])) {
-    
+$VM = "";
 $n_mols = $_POST['n_mols'];
-$temp =$_POST['temp'];
+$temp = $_POST['temp'];
 $pressao = $_POST['pressao'];
-$temp_final = " ";
-$press_final = " ";
+$temp_final = "";
+$press_final = "";
 $r = 0.082;
-
 
     if (is_numeric($n_mols) && is_numeric($temp) && is_numeric($pressao)){
 
@@ -49,27 +49,28 @@ $r = 0.082;
     
     $CNTP = $temp_final * $r * $n_mols;
 
-
-
- 
-
-
     $VM =  $CNTP * $press_final;
 
 
-
-
-
-
-    /*echo "pressao final é $press_final";
-    echo "<br>temperatura final é $temp_final";*/
-
 }   else {
-    echo "<br>VALOR INSERIDO É INVALIDO <br>";
+    //echo "<br>VALOR INSERIDO É INVALIDO <br>";
+    $VM = "Valor inserido é invalido!";
 }
+
+$result =  $VM;
+$mols  = $n_mols;
+$temper = $temp ;
+$press = $pressao;
 }
-define('value', $VM);
+
+define('result', $result);
+define('n_mol', $mols);
+define('temp', $temper);
+define('press', $press);
+
+
 include __DIR__.'/includes/header.php';
+include __DIR__.'/includes/menu.php';
 include __DIR__.'/includes/calculVolMol.php';
 include __DIR__.'/includes/footer.php';
 
